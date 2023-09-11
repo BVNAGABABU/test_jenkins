@@ -6,7 +6,7 @@ pipeline {
         branch 'main'
       }
       steps {
-        echo 'Building master'
+        echo 'Building production'
       }
     }
 
