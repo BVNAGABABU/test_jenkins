@@ -1,21 +1,12 @@
 pipeline {
-  agent any 
+  agent any
   stages {
-    stage('Build Master') {
+    stage('Build') {
       when {
-        branch 'main'
+        buildingTag()
       }
       steps {
-        echo 'Building production'
-      }
-    }
-
-    stage('Build dev') {
-      when {
-        branch 'master'
-      }
-      steps {
-        echo 'Building dev'
+        echo 'Building tag test line'
       }
     }
   }
